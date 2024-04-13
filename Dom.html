@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+        background-color: teal;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 450px;
+        padding: 10px;
+        row-gap: 10px;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <p style="align-items: center;">DOM CONCEPT</p>
+    <div class="container">
+        <div class="box" id="box-1">-box-1</div>
+        <div class="box" id="box-2">-box-2</div>
+        <div class="box" id="box-3">-box-3</div>
+        <div class="box" id="box-4">-box-4</div>
+    </div>
+    <script>
+        // let body=document.body;
+        // body.style.backgroundColor='red'
+        // console.log(body);
+        let box2=document.getElementById('box-2');
+        console.log(box2);
+        let tagname=document.getElementsByTagName('div');
+        console.log(tagname);
+        let boxes=document.getElementsByClassName('box');
+        console.log(boxes);
+        let box3=document.getElementById('box-3');
+        box3.innerHTML="<h1>Hello</h1>"
+        box3.style.backgroundColor='red'
+    </script>
+</body>
+</html>
